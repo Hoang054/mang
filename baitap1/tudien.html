@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="tudich">
+    <input id ="" type="submit" value="dich" onclick="dich()">
+    <div id="viet"></div>
+    <script>
+        let english=["hello","good bye","good","bye","congratulation"];
+        let tiengViet=["xin chao","tam biet","tot","tam biet","cmm"];
+        function dich(){
+            let candich =document.getElementById('tudich').value;
+            for(i=0;i<=english.length-1;i++){
+                if(candich === english[i]){
+                    document.getElementById("viet").innerHTML= tiengViet[i];
+                    break;
+                }else{
+                    document.getElementById("viet").innerHTML= "meo biet okay";
+                    
+                }
+            }
+        }
+    </script>
+</body>
+</html>

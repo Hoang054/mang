@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="viet"></div><br>
+    <input type="button" value="x" onclick="tichx()">
+    <input type="button" value="o" onclick="ticho()">
+    <script>
+        let b = document.getElementById("viet");
+        let a = [];
+        let data = "";
+        for (i = 0; i <= 4; i++) {
+            a[i] = [".", ".", ".", ".", "."];
+        }
+        for (i = 0; i <= 4; i++) {
+            data += "<br>"
+            for (j = 0; j <= 4; j++) {
+                data += a[i][j] + '&nbsp&nbsp&nbsp&nbsp';
+            }
+        }
+        b.innerHTML = data;
+        function tichx() {
+            let vitrix = prompt("vi tri dong");
+            let vitriy = prompt("vi tri cot");
+            a[vitrix][vitriy] = "x";
+            data = "";
+            for (let i = 0; i < 5; i++) {
+                data += "<br/>";
+                for (let j = 0; j < 5; j++) {
+                    data += a[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+                    if(a[i][j]==="x" && a[i-1][j-1]==='x' ){
+                        if(a[i-1][j-1]==='x' && a[i-2][j-2]==="x"){
+                        document.write('okay');
+                    }}
+                }
+            }
+            b.innerHTML = data;
+        }
+        function ticho() {
+            let vitrix = prompt("vi tri dong");
+            let vitriy = prompt("vi tri cot");
+            a[vitrix][vitriy] = "o";
+            data = "";
+            for (let i = 0; i < 5; i++) {
+                data += "<br/>";
+                for (let j = 0; j < 5; j++) {
+                    data += a[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+                    if(a[i][j]==="o" && a[i-1][j-1]==='o' ){
+                        if(a[i-1][j-1]==='o' && a[i-2][j-2]==="o"){
+                        document.write('okay');
+                    }}
+                }
+            }
+            b.innerHTML = data;
+        }
+
+    </script>
+</body>
+
+</html>
