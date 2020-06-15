@@ -36,10 +36,20 @@
                     data += a[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
                     if(a[i][j]==="x" && a[i-1][j-1]==='x' ){
                         if(a[i-1][j-1]==='x' && a[i-2][j-2]==="x"){
-                        document.write('okay');
+                        document.write('x thang');
+                    }
+                    }
+                    if(a[i][j]==="x" && a[i-1][j]==='x' ){
+                        if(a[i-1][j]==='x' && a[i-2][j]==="x"){
+                        document.write('x thang');
                     }}
-                }
-            }
+                    if(a[i][j]==="x" && a[i][j-1]==='x' ){
+                        if(a[i][j-1]==='x' && a[i][j-2]==="x"){
+                        document.write('x thang');
+                    }}
+                    
+                }}
+            
             b.innerHTML = data;
         }
         function ticho() {
@@ -53,7 +63,15 @@
                     data += a[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
                     if(a[i][j]==="o" && a[i-1][j-1]==='o' ){
                         if(a[i-1][j-1]==='o' && a[i-2][j-2]==="o"){
-                        document.write('okay');
+                        document.write('o thang');
+                    }}
+                    if(a[i][j]==="o" && a[i-1][j]==='o' ){
+                        if(a[i-1][j]==='o' && a[i-2][j]==="o"){
+                        document.write('o thang');
+                    }}
+                    if(a[i][j]==="o" && a[i][j-1]==='o' ){
+                        if(a[i][j-1]==='o' && a[i][j-2]==="o"){
+                        document.write('o thang');
                     }}
                 }
             }
